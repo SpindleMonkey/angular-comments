@@ -1,0 +1,6 @@
+<button class="btn orange darken-4 waves-effect waves-light" (click)='editComment(commentId)'><i class="material-icons">edit</i></button>
+<div *ngIf="editing">
+  <input [(ngModel)]="editedText" type="text" placeholder="Edit your comment" />
+  <input [(ngModel)]="editedAuthor" type="text" placeholder="Edit your name" />
+  <button class="btn orange darken-4 waves-effect waves-light" (click)='updateComment(commentId, editedText, editedAuthor)'>Update Your Comment</button>
+</div>

@@ -1,4 +1,8 @@
 <h1>Comments</h1>
+<hr>
+<app-add-comment></app-add-comment>
+<hr>
 <ul>
-    <li *ngFor="let comment of comments">{{comment}}</li>
+  <li *ngFor="let comment of comments; let position = index"> {{comment.aComment}} <br>-- {{comment.author}} <br><app-delete-comment [commentId]=position></app-delete-comment> <app-edit-comment [commentId]=position></app-edit-comment></li>
 </ul>
+<hr>

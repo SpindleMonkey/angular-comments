@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CommentService } from './comment/comment.service';
 
 @Component({
   selector: 'app-root',
@@ -6,9 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  comments = [
-      'first comment!',
-      'nice work!',
-      'I would also like to congratulate you!'
-  ];
+
+  comments = [];
+
+  constructor(private commentService: CommentService) { }
+
+  ngOnInit() {
+    this.comments = this.commentService.getAllComments();
+  }
+
 }

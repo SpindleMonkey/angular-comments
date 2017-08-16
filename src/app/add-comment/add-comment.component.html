@@ -1,0 +1,3 @@
+<input [(ngModel)]="commentText" type="text" [value]=commented placeholder="Your comment" />
+<input [(ngModel)]="commentAuthor" type="text" [value]=commentee placeholder="Your name" />
+<button class="btn orange darken-4 waves-effect waves-light" (click)='addNewComment(commentText, commentAuthor)'>Add Your Comment</button>
